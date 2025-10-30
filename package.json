@@ -1,0 +1,25 @@
+{
+  "name": "telegram-cloud-bot",
+  "version": "1.0.0",
+  "description": "Telegram file storage bot with unique ID system",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "telegram",
+    "bot",
+    "file-storage",
+    "cloud"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": "20.x",
+    "npm": "10.x"
+  },
+  "dependencies": {
+    "node-telegram-bot-api": "^0.66.0",
+    "mongoose": "^8.7.3"
+  }
+}
