@@ -1,0 +1,41 @@
+{
+  "name": "Telegram Cloud Bot",
+  "description": "A Telegram bot for file storage with unique ID system",
+  "repository": "https://github.com/yourusername/telegram-cloud-bot",
+  "logo": "https://telegram.org/img/t_logo.png",
+  "keywords": [
+    "telegram",
+    "bot",
+    "file-storage",
+    "cloud",
+    "nodejs"
+  ],
+  "stack": "heroku-24",
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "standard-2x"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "env": {
+    "BOT_TOKEN": {
+      "description": "Your Telegram Bot Token from @BotFather",
+      "required": true
+    },
+    "MONGODB_URI": {
+      "description": "MongoDB connection URI (you can use MongoDB Atlas free tier)",
+      "required": true
+    },
+    "CHANNEL_ID": {
+      "description": "Your storage channel ID or username (e.g., @your_channel or -1001234567890). Bot must be admin in this channel.",
+      "value": "@your_storage_channel",
+      "required": true
+    }
+  },
+  "addons": []
+}
