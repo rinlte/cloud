@@ -11,17 +11,6 @@
     "nodejs"
   ],
   "stack": "heroku-24",
-  "formation": {
-    "worker": {
-      "quantity": 1,
-      "size": "standard-2x"
-    }
-  },
-  "buildpacks": [
-    {
-      "url": "heroku/nodejs"
-    }
-  ],
   "env": {
     "BOT_TOKEN": {
       "description": "Your Telegram Bot Token from @BotFather",
@@ -37,5 +26,15 @@
       "required": true
     }
   },
-  "addons": []
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "standard-2x"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
 }
